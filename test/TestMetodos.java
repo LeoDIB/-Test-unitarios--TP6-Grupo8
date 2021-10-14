@@ -14,14 +14,14 @@ import logica.Usuario;
  */
 public class TestMetodos extends TestCase {
 
-    private Usuario usuario;
-
+    public Usuario usuario;
+   public Usuario usuario2;
     public void escenario() {
 
         usuario = new Usuario();
 
         usuario.setContraseña("asd2");
-
+        
     }
 
     private Calculo calculo;
@@ -44,5 +44,16 @@ public class TestMetodos extends TestCase {
               
     }
 
+    public void escenario3(){
+        usuario2= new Usuario();
+        usuario2.setEmailUsuario("paulupa95@gmail.com");
+        
+    }
+     
    
+    public void testYaExisteUsuario(){
+        escenario3();
+        assertEquals("paulupa95@gmail.com", usuario2.getEmailUsuario());       
+        //assertTrue("paulupa95@gmail.com", true);
+    }
 }
