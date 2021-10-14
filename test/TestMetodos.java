@@ -38,7 +38,7 @@ public class TestMetodos extends TestCase {
 
     }
 
-    public void testContraseñaNOnula() {
+    public void testContraseñaString() {
         escenario();
         assertEquals("String", usuario.getContraseña().getClass().getSimpleName());
               
@@ -47,6 +47,7 @@ public class TestMetodos extends TestCase {
     public void escenario3(){
         usuario2= new Usuario();
         usuario2.setEmailUsuario("paulupa95@gmail.com");
+        usuario2.setDniUsuario("39235486");
         
     }
      
@@ -56,4 +57,11 @@ public class TestMetodos extends TestCase {
         assertEquals("paulupa95@gmail.com", usuario2.getEmailUsuario());       
         //assertTrue("paulupa95@gmail.com", true);
     }
+public void testIngresoDNInoVacio (){
+    //chequea a la hora de registrarse e indicar el dni, no este vacio el campo
+    escenario3();
+    assertNotNull("No es null", usuario2.getDniUsuario());
+    
+  
+}
 }
