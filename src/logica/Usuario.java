@@ -11,12 +11,23 @@ package logica;
  */
 public class Usuario {
 
-    String nombreUsuario = "Pedro";
-    String apellidoUsuario = "Fulano";
-    String edadUsuario = "32";
-    String contraseña = "contraseña";
+    String nombreUsuario = "";
+    String apellidoUsuario = "";
+    String edadUsuario = "";
+    String contraseña = "";
     boolean estadoActivo;
+    String emailUsuario ="";
+    String dniUsuario="";
 
+    public String getDniUsuario() {
+        return dniUsuario;
+    }
+
+    public void setDniUsuario(String dniUsuario) {
+        this.dniUsuario = dniUsuario;
+    }
+    
+    
  
 
     public String getNombreUsuario() {
@@ -57,6 +68,14 @@ public class Usuario {
 
     public void setEstadoActivo(boolean estadoActivo) {
         this.estadoActivo = estadoActivo;
+    }
+
+    public String getEmailUsuario() {
+        return emailUsuario;
+    }
+
+    public void setEmailUsuario(String emailUsuario) {
+        this.emailUsuario = emailUsuario;
     }
 
     @Override
