@@ -62,12 +62,11 @@ public class TestMetodos extends TestCase {
         escenario3();
         assertEquals("paulupa95@gmail.com", usuario2.getEmailUsuario());
         
-        //assertTrue("paulupa95@gmail.com", true);
+     
     }
 
-    public void testIngresoDNInoVacio() {
-        
         //chequea a la hora de registrarse e indicar el dni, no este vacio el campo
+    public void testIngresoDNInoVacio() {
         
         escenario3();
         assertNotNull("No es null", usuario2.getDniUsuario());
