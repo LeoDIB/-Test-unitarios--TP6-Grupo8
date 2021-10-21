@@ -16,7 +16,7 @@ public class TestMetodos extends TestCase {
 
     public Usuario usuario;
     public Usuario usuario2;
-
+    public Usuario usuario3;
     public void escenario() {
 
         usuario = new Usuario();
@@ -53,16 +53,14 @@ public class TestMetodos extends TestCase {
 
     public void escenario3() {
         usuario2 = new Usuario();
-        usuario2.setEmailUsuario("paulupa95@gmail.com");
-        usuario2.setDniUsuario("39235486");
+        usuario2.setEmailUsuario( "paulupa95@gmail.com");
+        usuario2.setDniUsuario( "39235486");
 
     }
 
     public void testYaExisteUsuario() {
         escenario3();
         assertEquals("paulupa95@gmail.com", usuario2.getEmailUsuario());
-        
-     
     }
 
         //chequea a la hora de registrarse e indicar el dni, no este vacio el campo
@@ -72,4 +70,25 @@ public class TestMetodos extends TestCase {
         assertNotNull("No es null", usuario2.getDniUsuario());
 
     }
+    public void escenario4(){
+    usuario3= new Usuario();
+    usuario3.setContraseña("siempreviva1235");
+
+    }
+    
+    //verifica que la contraseña no sea vacia
+   public void testContraseñaVacia(){
+       escenario4();
+       assertNotNull( "Contraseña nula", usuario3.getContraseña());
+   }
+
+    //verifica que la contraseña ingresada sea correcta
+   public void testContraseñaCorrecta(){
+    escenario4();
+    assertEquals(usuario3.getContraseña(), "siempreviva1235");
 }
+   //verifica que la contraseña ingresada NO es correcta
+   public void testContraseñaIncorrecta(){
+       escenario4();
+       assertNotSame(usuario3.getContraseña(), "123456");
+   }
