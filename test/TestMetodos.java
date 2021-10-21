@@ -79,7 +79,7 @@ public class TestMetodos extends TestCase {
     //verifica que la contraseña no sea vacia
    public void testContraseñaVacia(){
        escenario4();
-       assertNotNull( "Contraseña nula", usuario3.getContraseña());
+       assertNotNull( "Contraseña no nula", usuario3.getContraseña());
    }
 
     //verifica que la contraseña ingresada sea correcta
@@ -90,5 +90,9 @@ public class TestMetodos extends TestCase {
    //verifica que la contraseña ingresada NO es correcta
    public void testContraseñaIncorrecta(){
        escenario4();
-       assertNotSame(usuario3.getContraseña(), "123456");
+       assertEquals(usuario3.getContraseña(), "123456");
+
    }
+
+}
+   
