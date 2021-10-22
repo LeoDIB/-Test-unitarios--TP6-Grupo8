@@ -40,6 +40,7 @@ public class Articulo {
      @Override
     public String toString() {
         return "Articulo{" + "nombreArticulo =" + nombreArticulo + ", cantidadStockArt=" + cantidadStockArt + ", codigoArticulo=" + codigoArticulo + '}';
+    
     }
     
 }
