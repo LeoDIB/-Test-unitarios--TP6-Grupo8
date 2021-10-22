@@ -17,6 +17,7 @@ public class TestMetodos extends TestCase {
     public Usuario usuario;
     public Usuario usuario2;
     public Usuario usuario3;
+    public Usuario usuario4;
     public Articulo articulo1;
     
     public void escenario() {
@@ -131,5 +132,25 @@ public class TestMetodos extends TestCase {
         assertNotNull("Articulo con código no vacío",articulo1.getCodigoArticulo());
     }
     
+    private void escenario6() {
+    usuario4= new Usuario();
+    usuario4.setNombreUsuario("martha");
+    usuario4.setContraseña("siempreviva1235");
+    usuario4.setDomicilio("Calle1");
+    usuario4.setApellidoUsuario("gomez");
+    usuario4.setDniUsuario("12345678");
+    }
+    
+    //Comprobar que el DNI de usuario sea único
+     public void testExisteDNI() {
+        escenario6();
+        assertEquals("12345678", usuario4.getDomicilio());
+    }
+    
+    //Comprobar que domicilio esté completo (distinto de vacío)
+      public void DomicilioNoVacio() {
+        escenario6();
+        assertNotNull("Domicilio no vacio", usuario4.getDniUsuario());
+    }
 }
    
