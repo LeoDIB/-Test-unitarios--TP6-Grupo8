@@ -130,5 +130,6 @@ public class TestMetodos extends TestCase {
         escenario5();
         assertNotNull("Articulo con código no vacío",articulo1.getCodigoArticulo());
     }
+    
 }
    
