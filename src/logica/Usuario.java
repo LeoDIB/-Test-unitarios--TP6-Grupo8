@@ -13,12 +13,21 @@ public class Usuario {
 
     String nombreUsuario = "";
     String apellidoUsuario = "";
-    String edadUsuario = "";
+    Integer edadUsuario;
     String contraseña = "";
     boolean estadoActivo;
     String emailUsuario ="";
     String dniUsuario="";
+    String domicilio ="";
 
+    public String getDomicilio() {
+        return domicilio;
+    }
+
+    public void setDomicilio(String domicilio) {
+        this.domicilio = domicilio;
+    }
+    
     public String getDniUsuario() {
         return dniUsuario;
     }
@@ -28,8 +37,6 @@ public class Usuario {
     }
     
     
- 
-
     public String getNombreUsuario() {
         return nombreUsuario;
     }
@@ -38,7 +45,7 @@ public class Usuario {
         return apellidoUsuario;
     }
 
-    public String getEdadUsuario() {
+    public Integer getEdadUsuario() {
         return edadUsuario;
     }
 
@@ -58,7 +65,7 @@ public class Usuario {
         this.apellidoUsuario = apellidoUsuario;
     }
 
-    public void setEdadUsuario(String edadUsuario) {
+    public void setEdadUsuario(Integer edadUsuario) {
         this.edadUsuario = edadUsuario;
     }
 
